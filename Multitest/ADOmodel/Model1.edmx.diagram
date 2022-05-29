@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="98aacb19e6ae4bca9b6f8116b47de130" Name="Diagram1" ZoomLevel="13">
+        <EntityTypeShape EntityType="mainModel.ActitudAnteCompetencia" Width="1.5" PointX="0.75" PointY="31.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.AnsiedadCompetitiva" Width="1.5" PointX="0.75" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.CualidMotivDeportiv" Width="1.5" PointX="0.75" PointY="38.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.CualiVolitivasDep" Width="1.5" PointX="0.75" PointY="43.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.DatosSujetos" Width="1.5" PointX="0.75" PointY="47.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.Idetem" Width="1.5" PointX="0.75" PointY="56.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.Iped" Width="1.5" PointX="0.75" PointY="51.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.MotivDeporButt" Width="1.5" PointX="0.75" PointY="65.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.Pru16pf" Width="1.5" PointX="0.75" PointY="69.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.PruCatell" Width="1.5" PointX="0.75" PointY="84.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.PruCleaver" Width="1.5" PointX="0.75" PointY="79.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.PruDomino" Width="1.5" PointX="0.75" PointY="93.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.PruEysenk" Width="1.5" PointX="0.75" PointY="96.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.PruFHumano" Width="1.5" PointX="0.75" PointY="103.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.PruIdareRago" Width="1.5" PointX="0.75" PointY="100.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.PruIdareSituacional" Width="1.5" PointX="0.75" PointY="109.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.PruLoehr" Width="1.5" PointX="0.75" PointY="112.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.PruPoms" Width="1.5" PointX="0.75" PointY="116.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.PruRaven" Width="1.5" PointX="0.75" PointY="120.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.PruResanti" Width="1.5" PointX="0.75" PointY="151.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.PruTrcomple" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.PruTRN" Width="1.5" PointX="0.75" PointY="138.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.PruTrsimple" Width="1.5" PointX="0.75" PointY="127.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.PruWeil" Width="1.5" PointX="0.75" PointY="124.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.SujetosEvaluados" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.Switchboard_Items" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.Tipoetapa" Width="1.5" PointX="0.75" PointY="174.875" IsExpanded="true" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_8_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_7_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_3_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_25_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_4_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_5_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_6_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_24_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_23_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_22_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_21_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_20_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_19_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_1_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_18_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_17_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_16_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_15_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_14_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_13_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_2_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_12_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_11_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_10_0" ManuallyRouted="false" />
+        <AssociationConnector Association="mainModel.FK_SujetosEvaluados_9_0" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

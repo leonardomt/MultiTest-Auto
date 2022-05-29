@@ -1,0 +1,1532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB70D81D-525E-4BF7-8D47-C5C0BF5ADFF8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Multitest</RootNamespace>
+    <AssemblyName>Multitest</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\Leonardo\Desktop\MultiTest\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>MultiTest</ProductName>
+    <PublisherName>MultiTest</PublisherName>
+    <SuiteName>MultiTest</SuiteName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5315FFD2E9C0762225AAC088CD96C79AB4ADB8BD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Multitest_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>android_chrome_512x5_hKjfE.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ekm.oledb.data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetToObjects.1.1.8.8\lib\ekm.oledb.data.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FTD2XX_NET">
+      <HintPath>D:\Escritorio\Para Hanze\Tiempo_Arrancada\Tiempo_Arrancada\bin\Debug\FTD2XX_NET.dll</HintPath>
+    </Reference>
+    <Reference Include="JetEntityFrameworkProvider, Version=6.0.0.0, Culture=neutral, PublicKeyToken=756cf6beb8fe7b41, processorArchitecture=x86">
+      <HintPath>..\packages\JetEntityFrameworkProvider.6.1.4\lib\JetEntityFrameworkProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.115.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\lib\net451\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.115.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.115.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.115.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.115.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveControlUser.cs" />
+    <Compile Include="ADOmodel\ActitudAnteCompetencia.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\AnsiedadCompetitiva.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\CualidMotivDeportiv.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\CualiVolitivasDep.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\DatosSujetos.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\Idetem.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\Iped.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\MotivDeporButt.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\Pru16pf.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\PruCatell.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\PruCleaver.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\PruDomino.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\PruEysenk.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\PruFHumano.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\PruIdareRago.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\PruIdareSituacional.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\PruLoehr.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\PruPoms.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\PruRaven.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\PruResanti.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\PruTrcomple.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\PruTRN.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\PruTrsimple.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\PruWeil.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\SujetosEvaluados.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\Switchboard_Items.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADOmodel\Tipoetapa.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuxClass\16PF.cs" />
+    <Compile Include="AuxClass\16pfTest.cs" />
+    <Compile Include="AuxClass\AuxPreguntas.cs" />
+    <Compile Include="AuxClass\AuxTest.cs" />
+    <Compile Include="AuxClass\Cronometrocs.cs" />
+    <Compile Include="AuxClass\StopWatchUser.cs" />
+    <Compile Include="AuxClass\TableWeil.cs" />
+    <Compile Include="AuxClass\VerificarHardware.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="FormAux\Importar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAux\Importar.Designer.cs">
+      <DependentUpon>Importar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAux\Exportar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAux\Exportar.Designer.cs">
+      <DependentUpon>Exportar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAux\AcercaDecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAux\AcercaDecs.Designer.cs">
+      <DependentUpon>AcercaDecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAux\CatellDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAux\CatellDetails.Designer.cs">
+      <DependentUpon>CatellDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuxClass\DominoTest.cs" />
+    <Compile Include="AuxClass\Edad.cs" />
+    <Compile Include="AuxClass\FactorAB.cs" />
+    <Compile Include="AuxClass\RavenClass.cs" />
+    <Compile Include="AuxClass\_16PfTablePercentil.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAux\Esperar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAux\Esperar.Designer.cs">
+      <DependentUpon>Esperar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAux\GraficoPoms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAux\GraficoPoms.Designer.cs">
+      <DependentUpon>GraficoPoms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAux\GraficoVolitiv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAux\GraficoVolitiv.Designer.cs">
+      <DependentUpon>GraficoVolitiv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAux\EstablecerEtapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAux\EstablecerEtapa.Designer.cs">
+      <DependentUpon>EstablecerEtapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAux\Etapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAux\Etapa.Designer.cs">
+      <DependentUpon>Etapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAux\IdetemProp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAux\IdetemProp.Designer.cs">
+      <DependentUpon>IdetemProp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAux\TipoMultitest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAux\TipoMultitest.Designer.cs">
+      <DependentUpon>TipoMultitest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTDI\ConectionFTDI.cs" />
+    <Compile Include="PanelesPrincipales\DeshailitadoControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelesPrincipales\DeshailitadoControl1.Designer.cs">
+      <DependentUpon>DeshailitadoControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelesPrincipales\Reportes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelesPrincipales\Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelesPrincipales\UserControlPruebas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelesPrincipales\UserControlPruebas.Designer.cs">
+      <DependentUpon>UserControlPruebas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelesPrincipales\UserControlInicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelesPrincipales\UserControlInicio.Designer.cs">
+      <DependentUpon>UserControlInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelesPrincipales\UserControlUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelesPrincipales\UserControlUser.Designer.cs">
+      <DependentUpon>UserControlUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelesPrincipales\UserControlVerPruebas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelesPrincipales\UserControlVerPruebas.Designer.cs">
+      <DependentUpon>UserControlVerPruebas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasPruebas\Form16Pf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPruebas\Form16Pf.Designer.cs">
+      <DependentUpon>Form16Pf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasPruebas\Preguntas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPruebas\Preguntas.Designer.cs">
+      <DependentUpon>Preguntas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasPruebas\PruebasPantalla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPruebas\PruebasPantalla.Designer.cs">
+      <DependentUpon>PruebasPantalla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasPruebas\RA\Auxiliar.cs" />
+    <Compile Include="VentanasPruebas\RA\RA_Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPruebas\RA\RA_Form1.Designer.cs">
+      <DependentUpon>RA_Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasPruebas\RA\RA_Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPruebas\RA\RA_Form2.Designer.cs">
+      <DependentUpon>RA_Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasPruebas\RA\RA_Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPruebas\RA\RA_Form3.Designer.cs">
+      <DependentUpon>RA_Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRC\Result.cs" />
+    <Compile Include="VentanasPruebas\TRC\TRC_Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRC\TRC_Form1.Designer.cs">
+      <DependentUpon>TRC_Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRC\TRC_Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRC\TRC_Form2.Designer.cs">
+      <DependentUpon>TRC_Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRC\TRC_Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRC\TRC_Form3.Designer.cs">
+      <DependentUpon>TRC_Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRN\TRN_Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRN\TRN_Form1.Designer.cs">
+      <DependentUpon>TRN_Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRN\TRN_Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRN\TRN_Form2.Designer.cs">
+      <DependentUpon>TRN_Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRN\TRN_Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRN\TRN_Form3.Designer.cs">
+      <DependentUpon>TRN_Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRS\TRS_Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRS\TRS_Form1.Designer.cs">
+      <DependentUpon>TRS_Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRS\TRS_Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRS\TRS_Form2.Designer.cs">
+      <DependentUpon>TRS_Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRS\TRS_Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPruebas\TRS\TRS_Form3.Designer.cs">
+      <DependentUpon>TRS_Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\16PfFormView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\16PfFormView.Designer.cs">
+      <DependentUpon>16PfFormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\ActitudCompetenciaView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\ActitudCompetenciaView.Designer.cs">
+      <DependentUpon>ActitudCompetenciaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\ButtView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\ButtView.Designer.cs">
+      <DependentUpon>ButtView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\CatellView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\CatellView.Designer.cs">
+      <DependentUpon>CatellView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\CualidadesMotivacionalesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\CualidadesMotivacionalesView.Designer.cs">
+      <DependentUpon>CualidadesMotivacionalesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\CualidadesVolitivasView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\CualidadesVolitivasView.Designer.cs">
+      <DependentUpon>CualidadesVolitivasView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\DominoView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\DominoView.Designer.cs">
+      <DependentUpon>DominoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\EysenckView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\EysenckView.Designer.cs">
+      <DependentUpon>EysenckView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\IdareView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\IdareView.Designer.cs">
+      <DependentUpon>IdareView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\IdetemView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\IdetemView.Designer.cs">
+      <DependentUpon>IdetemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\IpedView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\IpedView.Designer.cs">
+      <DependentUpon>IpedView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\AnsiedadPrecomView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\AnsiedadPrecomView.Designer.cs">
+      <DependentUpon>AnsiedadPrecomView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\PomsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\PomsView.Designer.cs">
+      <DependentUpon>PomsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\RavenView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\RavenView.Designer.cs">
+      <DependentUpon>RavenView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\ResptAnticipadaView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\ResptAnticipadaView.Designer.cs">
+      <DependentUpon>ResptAnticipadaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\TRCSView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\TRCSView.Designer.cs">
+      <DependentUpon>TRCSView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\TRCView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\TRCView.Designer.cs">
+      <DependentUpon>TRCView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\TRSView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\TRSView.Designer.cs">
+      <DependentUpon>TRSView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\VisualizarPruebasRealizada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\VisualizarPruebasRealizada.Designer.cs">
+      <DependentUpon>VisualizarPruebasRealizada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\WeilView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\WeilView.Designer.cs">
+      <DependentUpon>WeilView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\_16PFAvanzado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebasRealizadas\_16PFAvanzado.Designer.cs">
+      <DependentUpon>_16PFAvanzado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebas\UserControlTodasPruebasTAB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebas\UserControlTodasPruebasTAB.Designer.cs">
+      <DependentUpon>UserControlTodasPruebasTAB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebas\UserControlVisualizarPruebaAtleta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebas\UserControlVisualizarPruebaAtleta.Designer.cs">
+      <DependentUpon>UserControlVisualizarPruebaAtleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPruebas\VisualizarPruebasTodas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarPruebas\VisualizarPruebasTodas.Designer.cs">
+      <DependentUpon>VisualizarPruebasTodas.cs</DependentUpon>
+    </Compile>
+    <Content Include="ADOmodel\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ADOmodel\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="android_chrome_512x5_hKjfE.ico" />
+    <Content Include="MetroFramework.txt" />
+    <Content Include="PlantillasWord\IDARE%28Rasgo%29.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlantillasWord\Catell.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlantillasWord\CualidadesVolitivas.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlantillasWord\ActitudAnteCompetencia.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlantillasWord\CualidadesMotivacionales.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlantillasWord\Eysenck.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlantillasWord\16pf.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlantillasWord\IDETEM.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlantillasWord\Iped.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlantillasWord\TRS.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlantillasWord\RA.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlantillasWord\TRC.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlantillasWord\TRCS.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Multitest_TemporaryKey.pfx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MultiTest.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="ADOmodel\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ADOmodel\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <Content Include="PlantillasWord\Ansiedad Pre Competitiva.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlantillasWord\Poms.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="ClassDiagram2.cd" />
+    <None Include="packages.config" />
+    <Content Include="PlantillasWord\TRN.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\app.manifest" />
+    <None Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\icons8-user-16.png" />
+    <None Include="Resources\icons8-user-321.png" />
+    <None Include="Resources\icons8-user-25.png" />
+    <None Include="Resources\icons8-user-20.png" />
+    <None Include="Resources\icons8-test-passed-20.png" />
+    <None Include="Resources\test-passed.png" />
+    <None Include="Resources\user-20.png" />
+    <None Include="Resources\icons8-user-20 %283%29.png" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\saber-competir-para-deportistas-min.png" />
+    <None Include="Resources\logo_upad_uam_wordpress3.png" />
+    <None Include="Resources\psicodeportepng.png" />
+    <None Include="Resources\psicodeportepng1.png" />
+    <None Include="Resources\CVyf.gif" />
+    <None Include="Resources\82-825930_pe-psicologia-deportiva.png" />
+    <None Include="Resources\unnamed.jpg" />
+    <None Include="Resources\logo cimab completo.jpg" />
+    <None Include="Resources\loading1.gif" />
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="FormAux\Importar.resx">
+      <DependentUpon>Importar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAux\Exportar.resx">
+      <DependentUpon>Exportar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAux\AcercaDecs.resx">
+      <DependentUpon>AcercaDecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAux\CatellDetails.resx">
+      <DependentUpon>CatellDetails.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAux\Esperar.resx">
+      <DependentUpon>Esperar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAux\GraficoPoms.resx">
+      <DependentUpon>GraficoPoms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAux\GraficoVolitiv.resx">
+      <DependentUpon>GraficoVolitiv.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAux\EstablecerEtapa.resx">
+      <DependentUpon>EstablecerEtapa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAux\Etapa.resx">
+      <DependentUpon>Etapa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAux\IdetemProp.resx">
+      <DependentUpon>IdetemProp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAux\TipoMultitest.resx">
+      <DependentUpon>TipoMultitest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelesPrincipales\DeshailitadoControl1.resx">
+      <DependentUpon>DeshailitadoControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelesPrincipales\Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelesPrincipales\UserControlPruebas.resx">
+      <DependentUpon>UserControlPruebas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelesPrincipales\UserControlInicio.resx">
+      <DependentUpon>UserControlInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelesPrincipales\UserControlUser.resx">
+      <DependentUpon>UserControlUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelesPrincipales\UserControlVerPruebas.resx">
+      <DependentUpon>UserControlVerPruebas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPruebas\Form16Pf.resx">
+      <DependentUpon>Form16Pf.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPruebas\Preguntas.resx">
+      <DependentUpon>Preguntas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPruebas\PruebasPantalla.resx">
+      <DependentUpon>PruebasPantalla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPruebas\RA\RA_Form1.resx">
+      <DependentUpon>RA_Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPruebas\RA\RA_Form2.resx">
+      <DependentUpon>RA_Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPruebas\RA\RA_Form3.resx">
+      <DependentUpon>RA_Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPruebas\TRC\TRC_Form1.resx">
+      <DependentUpon>TRC_Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPruebas\TRC\TRC_Form2.resx">
+      <DependentUpon>TRC_Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPruebas\TRC\TRC_Form3.resx">
+      <DependentUpon>TRC_Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPruebas\TRN\TRN_Form1.resx">
+      <DependentUpon>TRN_Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPruebas\TRN\TRN_Form2.resx">
+      <DependentUpon>TRN_Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPruebas\TRN\TRN_Form3.resx">
+      <DependentUpon>TRN_Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPruebas\TRS\TRS_Form1.resx">
+      <DependentUpon>TRS_Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPruebas\TRS\TRS_Form2.resx">
+      <DependentUpon>TRS_Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPruebas\TRS\TRS_Form3.resx">
+      <DependentUpon>TRS_Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\16PfFormView.resx">
+      <DependentUpon>16PfFormView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\ActitudCompetenciaView.resx">
+      <DependentUpon>ActitudCompetenciaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\ButtView.resx">
+      <DependentUpon>ButtView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\CatellView.resx">
+      <DependentUpon>CatellView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\CualidadesMotivacionalesView.resx">
+      <DependentUpon>CualidadesMotivacionalesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\CualidadesVolitivasView.resx">
+      <DependentUpon>CualidadesVolitivasView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\DominoView.resx">
+      <DependentUpon>DominoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\EysenckView.resx">
+      <DependentUpon>EysenckView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\IdareView.resx">
+      <DependentUpon>IdareView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\IdetemView.resx">
+      <DependentUpon>IdetemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\IpedView.resx">
+      <DependentUpon>IpedView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\AnsiedadPrecomView.resx">
+      <DependentUpon>AnsiedadPrecomView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\PomsView.resx">
+      <DependentUpon>PomsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\RavenView.resx">
+      <DependentUpon>RavenView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\ResptAnticipadaView.resx">
+      <DependentUpon>ResptAnticipadaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\TRCSView.resx">
+      <DependentUpon>TRCSView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\TRCView.resx">
+      <DependentUpon>TRCView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\TRSView.resx">
+      <DependentUpon>TRSView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\VisualizarPruebasRealizada.resx">
+      <DependentUpon>VisualizarPruebasRealizada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\WeilView.resx">
+      <DependentUpon>WeilView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebasRealizadas\_16PFAvanzado.resx">
+      <DependentUpon>_16PFAvanzado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebas\UserControlTodasPruebasTAB.resx">
+      <DependentUpon>UserControlTodasPruebasTAB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebas\UserControlVisualizarPruebaAtleta.resx">
+      <DependentUpon>UserControlVisualizarPruebaAtleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPruebas\VisualizarPruebasTodas.resx">
+      <DependentUpon>VisualizarPruebasTodas.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="PlantillasWord\Raven.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlantillasWord\Weil.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlantillasWord\Dominó.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlantillasWord\Butt.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlantillasWord\IDARE%28Situacional%29.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\A1.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\A10.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\A11.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\A12.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\A2.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\A3.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\A4.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\A5.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\A6.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\A7.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\A8.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\A9.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\B1.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\B10.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\B11.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\B12.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\B2.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\B3.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\B4.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\B5.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\B6.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\B7.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\B8.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\B9.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\C1.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\C10.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\C11.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\C12.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\C2.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\C3.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\C4.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\C5.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\C6.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\C7.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\C8.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\C9.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\D1.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\D10.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\D11.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\D12.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\D2.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\D3.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\D4.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\D5.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\D6.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\D7.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\D8.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\D9.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\E1.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\E10.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\E11.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\E12.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\E2.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\E3.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\E4.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\E5.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\E6.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\E7.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\E8.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\E9.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F1.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F10.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F11.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F12.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F13.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F14.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F15.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F16.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F17.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F18.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F19.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F2.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F20.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F21.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F22.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F23.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F24.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F25.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F26.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F27.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F28.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F29.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F3.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F30.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F31.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F32.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F33.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F34.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F35.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F36.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F37.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F38.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F39.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F4.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F40.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F41.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F42.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F43.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F44.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F45.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F46.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F47.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F48.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F5.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F6.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F7.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F8.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\F9.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W1.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W10.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W11.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W12.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W13.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W14.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W15.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W16.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W17.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W18.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W19.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W2.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W20.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W21.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W22.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W23.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W24.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W25.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W26.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W27.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W28.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W29.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W3.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W30.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W31.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W32.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W33.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W34.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W35.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W36.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W37.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W38.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W39.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W4.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W40.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W41.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W42.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W43.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W44.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W45.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W46.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W47.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W48.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W49.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W5.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W50.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W51.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W52.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W53.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W54.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W55.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W56.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W57.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W58.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W59.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W6.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W60.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W7.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W8.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\W9.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\icons8-eye-32%281%29.png" />
+    <None Include="Resources\icons8-eye-20.png" />
+    <None Include="Resources\icons8-eye-32.png" />
+    <None Include="Resources\multitest.png" />
+    <None Include="Resources\Verde.png" />
+    <None Include="Resources\rojo.png" />
+    <None Include="Resources\amarillo.png" />
+    <None Include="Resources\lupa.png" />
+    <None Include="Resources\icons8-test-passed-32.png" />
+    <None Include="Resources\Vossen1.jpg" />
+    <None Include="Resources\icons8-user-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>
