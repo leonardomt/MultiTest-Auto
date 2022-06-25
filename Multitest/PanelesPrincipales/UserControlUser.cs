@@ -167,7 +167,7 @@ namespace Multitest
                                 {
 
                                     MessageBox.Show("El sujeto ya existe en el sistema", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    limpiarCampos();
+                                    
 
                                 }
                             }
@@ -196,12 +196,13 @@ namespace Multitest
         {
             bool result = true;
 
-            if (res.NombreS == d.NombreS && res.PrimerApellido == d.PrimerApellido && res.SegundoApellido == d.SegundoApellido && res.Sexo == d.Sexo && res.Entidad == d.Entidad && res.Ocupacion == d.Ocupacion &&
+            if (res.NCarnetIdent == d.NCarnetIdent || res.NombreS == d.NombreS && res.PrimerApellido == d.PrimerApellido && res.SegundoApellido == d.SegundoApellido && res.Sexo == d.Sexo && res.Entidad == d.Entidad && res.Ocupacion == d.Ocupacion &&
             res.Edad == d.Edad &&
             res.NivelEscolar == d.NivelEscolar)
-
+            {
+               
                 result = false;
-
+            }
 
             return result;
         }

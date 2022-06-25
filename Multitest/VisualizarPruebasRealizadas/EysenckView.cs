@@ -70,26 +70,26 @@ namespace Multitest.VisualizarPruebasRealizadas
 
                                 if (label8.Text == "Melancólico")
                                 {
-                                    label6.Text = "Labil,Ansioso,Rígido,Severo,Pesimista,Reservado,Insaciable y Tranquilo";
-                                    label2.Text = "DEBIL (equilibrio menor,fuerza menor,movilidad menor)";
+                                    label6.Text = "Hábil, Ansioso, Rígido, Severo, Pesimista, Reservado, Insaciable y Tranquilo";
+                                    label2.Text = "DEBIL ( Equilibrio menor, Fuerza menor, Movilidad menor)";
                                 }
 
                                 if (label8.Text == "Colérico")
                                 {
-                                    label6.Text = "Susceptible, Agitado,Agresivo,Excitable,Variable,Impulsivo,Optimista y Activo";
-                                    label2.Text = "FUERTE (sistema nervioso fuerte,equilibrio menor,fuerza mayor,movilidad mayor)";
+                                    label6.Text = "Susceptible, Agitado, Agresivo,Excitable, Variable,Impulsivo, Optimista y Activo";
+                                    label2.Text = "FUERTE ( Equilibrio menor, Fuerza mayor, Movilidad mayor)";
                                 }
 
                                 if (label8.Text == "Flemático")
                                 {
-                                    label6.Text = "Pasivo,Cuidadoso,Pensativo,Apacible,Controlado,Leal,Ecuanime e Imperturbable";
-                                    label2.Text = "FUERTE (sistema nervioso fuerte,equilibrio mayor,fuerza mayor,movilidad menor (pero normal) )";
+                                    label6.Text = "Pasivo, Cuidadoso, Pensativo, Apacible, Controlado, Leal, Ecuanime e Imperturbable";
+                                    label2.Text = "FUERTE ( Equilibrio mayor, Fuerza mayor, Movilidad menor (pero normal) )";
                                 }
 
                                 if (label8.Text == "Sanguíneo")
                                 {
-                                    label6.Text = "Sociable,Expresivo,Locuaz,Sensible,Vivaz,Adaptable,Animado,Despreocupado y Diligente";
-                                    label2.Text = "FUERTE (sistema nervioso fuerte,equilibrio mayor,fuerza mayor,movilidad mayor)";
+                                    label6.Text = "Sociable, Expresivo, Locuaz, Sensible, Vivaz, Adaptable, Animado, Despreocupado y Diligente";
+                                    label2.Text = "FUERTE ( Equilibrio mayor, Fuerza mayor, Movilidad mayor)";
                                 }
 
                                 if (label8.Text == "No determinado")

@@ -4118,26 +4118,26 @@ namespace Multitest
             }
 
 
-            if (neuroticismo > 10 && neuroticismo < 26 && extroversion > 2 && extroversion <= 14)
+            if (neuroticismo >= 10 && neuroticismo <= 26 && extroversion >= 2 && extroversion <= 14)
             {
                 diagCuadrante = "Melancólico";
             }
 
 
-            if (neuroticismo > 10 && neuroticismo < 26 && extroversion > 14 && extroversion < 26)
+            if (neuroticismo >= 10 && neuroticismo <= 26 && extroversion >= 14 && extroversion <= 26)
             {
                 diagCuadrante = "Colérico";
             }
 
 
 
-            if (neuroticismo <= 10 && neuroticismo > 2 && extroversion > 2 && extroversion <= 14)
+            if (neuroticismo <= 10 && neuroticismo >= 2 && extroversion >= 2 && extroversion <= 14)
             {
                 diagCuadrante = "Flemático";
             }
 
 
-            if (neuroticismo <= 10 && neuroticismo > 2 && extroversion > 14 && extroversion < 26)
+            if (neuroticismo <= 10 && neuroticismo >= 2 && extroversion >= 14 && extroversion <= 26)
             {
                 diagCuadrante = "Sanguíneo";
             }

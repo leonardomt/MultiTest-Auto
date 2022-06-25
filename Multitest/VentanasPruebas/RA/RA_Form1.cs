@@ -865,8 +865,7 @@ namespace Multitest
 
             return rawData[0].ToString();
         }
-
-        private string readFromFTDI1Byte(UInt32 cantByte)
+                    private string readFromFTDI1Byte(UInt32 cantByte)
         {
             string entradaDatos = "";
 
