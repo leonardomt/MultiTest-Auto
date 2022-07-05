@@ -28,7 +28,7 @@ namespace Multitest
         private FTDI.FT_STATUS ftStatus = FTDI.FT_STATUS.FT_OK;
         private FTDI myFtdiDevice;
         string varianteSentido = "";
-
+        string liberado = "no";
         String tiempoTarjetaFTDI = "";
 
         int[] P1 = new int[] { 6, 6, 2, 2, 6, 6, 2, 6, 2, 2, 6, 2, 6, 2, 2, 6, 2, 6, 6, 2 };
@@ -1071,7 +1071,16 @@ namespace Multitest
 
         private void timer2_Tick(object sender, EventArgs e)
         {
+            if (true)
+            {
+                if (liberado == "si")
+                {
+                    this.Invoke(new MethodInvoker(() => Cursor.Show()));
 
+                    if (DialogResult.OK == MessageBox.Show("Pulsador suelto. Vuelva a pulsarlo.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning))
+                        this.Invoke(new MethodInvoker(() => Cursor.Hide()));
+                }
+            
             quitarCircunferencia = false;
             pintarCircunferencia = true;
             salidaCirculo = false;
@@ -1100,7 +1109,7 @@ namespace Multitest
                     posXCir = bordeIzquierdo;
                     posYCir = posYRect1;
                     sentido = 1;
-                    timer3.Interval = 3000 + 1266;
+                    timer3.Interval = 1000 + 1266;
                     velocidadAtual = "1";
 
 
@@ -1111,7 +1120,7 @@ namespace Multitest
                     posXCir = posXRect2;
                     posYCir = posYRect3;
                     sentido = 2;
-                    timer3.Interval = 3000 + 1266;
+                    timer3.Interval = 1000 + 1266;
                     velocidadAtual = "1";
                 }
                 if (variante[count] == 3)
@@ -1120,7 +1129,7 @@ namespace Multitest
                     posXCir = bordeIzquierdo;
                     posYCir = posYRect1;
                     sentido = 1;
-                    timer3.Interval = 3000 + 1688;
+                    timer3.Interval = 1000 + 1688;
                     velocidadAtual = "2";
                 }
                 if (variante[count] == 4)
@@ -1129,7 +1138,7 @@ namespace Multitest
                     posXCir = posXRect2;
                     posYCir = posYRect3;
                     sentido = 2;
-                    timer3.Interval = 3000 + 1688;
+                    timer3.Interval = 1000 + 1688;
                     velocidadAtual = "2";
                 }
                 if (variante[count] == 5)
@@ -1138,7 +1147,7 @@ namespace Multitest
                     posXCir = bordeIzquierdo;
                     posYCir = posYRect1;
                     sentido = 1;
-                    timer3.Interval = 3000 + 2110;
+                    timer3.Interval = 1000 + 2110;
                     velocidadAtual = "3";
 
                 }
@@ -1148,7 +1157,7 @@ namespace Multitest
                     posXCir = posXRect2;
                     posYCir = posYRect3;
                     sentido = 2;
-                    timer3.Interval = 3000 + 2110;
+                    timer3.Interval = 1000 + 2110;
                     velocidadAtual = "3";
 
 
@@ -1159,7 +1168,7 @@ namespace Multitest
                     posXCir = bordeIzquierdo;
                     posYCir = posYRect1;
                     sentido = 1;
-                    timer3.Interval = 3000 + 2532;
+                    timer3.Interval = 1000 + 2532;
                     velocidadAtual = "4";
 
 
@@ -1170,7 +1179,7 @@ namespace Multitest
                     posXCir = posXRect2;
                     posYCir = posYRect3;
                     sentido = 2;
-                    timer3.Interval = 3000 + 2532;
+                    timer3.Interval = 1000 + 2532;
                     velocidadAtual = "4";
                 }
 
@@ -1183,21 +1192,15 @@ namespace Multitest
                     String temp = readFromFTDI1Byte(Convert.ToUInt32(2));  //SI se queda 2 seg sin pulsar error
 
 
-                    if (temp == "l")
-                    {
-                        breakLopp = true;
-                        timer2.Stop();
-                        timer1.Stop();
-                        timer3.Stop();
-                        timer4.Stop();
-                        myFtdiDevice.Close();
+                        if (temp == "l")
+                        {
+                            liberado = "si";
 
-                        this.Invoke(new MethodInvoker(() => Cursor.Show()));
+                            
 
-                        MessageBox.Show("Pulsador suelto, prueba abortada.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        this.Invoke(new MethodInvoker(() => this.Close()));
 
-                    }
+                        }
+                        else liberado = "no";
 
 
                 }
@@ -1247,6 +1250,9 @@ namespace Multitest
                     this.Invoke(new MethodInvoker(() => this.Close()));
 
                 }
+
+            }
+
 
             }
         }
